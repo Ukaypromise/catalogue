@@ -1,6 +1,12 @@
-import React from "react";
+"use client"
+
+import React, { use } from "react";
+import CustomButton from "./CustomButton";
 
 const Hero = () => {
+  const handleScroll = () => {
+    console.log("scrolling");
+  };
   return (
     <div className="hero">
       <div className="flex-1 pt-36 padding-x">
@@ -8,8 +14,13 @@ const Hero = () => {
           Find, book, or rent a car faster - quickly and easily!
         </h1>
         <p className="hero__subtitle">
-            streamlines the process of finding, booking, and renting a car.
+          streamlines the process of finding, booking, and renting a car.
         </p>
+        <CustomButton
+          title="Explore Cars"
+          containerStyles="bg-primary-blue text-white rounded-full mt-10"
+          handleClick={handleScroll}
+        />
       </div>
     </div>
   );
